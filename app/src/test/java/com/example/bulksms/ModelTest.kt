@@ -41,5 +41,6 @@ class ModelTest {
         // no header row: first row is data
         val n = toTable(listOf(listOf("0911223344", "Sara")))
         assertEquals(listOf("Column 1", "Column 2"), n.headers); assertEquals(1, n.rows.size)
+        assertEquals(Table(emptyList(), emptyList()), toTable(emptyList()))
     }
 }

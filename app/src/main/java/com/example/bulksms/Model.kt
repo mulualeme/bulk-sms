@@ -97,7 +97,7 @@ fun looksLikePhone(s: String): Boolean { val d = s.filter(Char::isDigit); return
 /** Uses the first row as headers unless it looks like data (contains a phone number). */
 fun toTable(rows: List<List<String>>, firstRowHeader: Boolean = rows.firstOrNull()?.none(::looksLikePhone) ?: true): Table {
     val width = rows.maxOfOrNull { it.size } ?: 0
-    val head = if (firstRowHeader) rows.first() else emptyList()
+    val head = if (firstRowHeader) rows.firstOrNull().orEmpty() else emptyList()
     val headers = (0 until width).map { i -> head.getOrNull(i)?.takeIf { it.isNotBlank() } ?: "Column ${i + 1}" }
     return Table(headers, rows.drop(if (firstRowHeader) 1 else 0).map { r -> List(width) { r.getOrElse(it) { "" } } })
 }
