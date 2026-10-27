@@ -1,0 +1,5 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="48dp" android:height="48dp" android:viewportWidth="512" android:viewportHeight="512">
+    <!-- a stack of speech bubbles: one message, many people -->
+    <path android:fillColor="#FF9BB8AC" android:pathData="M196,80H384C411,80 432,101 432,128V240C432,267 411,288 384,288H376V168C376,141 355,120 328,120H148V128C148,101 169,80 196,80Z"/>
+    <path android:fillColor="#FF37715A" android:fillType="evenOdd" android:pathData="M128,160H320C347,160 368,181 368,208V320C368,347 347,368 320,368H208L144,416V368H128C101,368 80,347 80,320V208C80,181 101,160 128,160ZM132,236H316V260H132ZM132,290H260V314H132Z"/>
+</vector>
